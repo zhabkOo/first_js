@@ -1,3 +1,4 @@
+//-------THE FIRST PART OF THE TASK-------//
 //1.-------RECTANGLE AREA-------//
 let a = 2.4, //"a" side of rectangle is 2.4
   b = 3.3, //"b" side of rectangle is 3.3
@@ -19,3 +20,50 @@ let circleRadius = "5.67cm";
 let circleRadiusNumber = parseFloat(circleRadius); //convert circleRadius to number with float point
 let circleArea = Math.PI * circleRadiusNumber ** 2; //π*R²
 console.log(circleArea); //output result to console
+
+//-------THE SECOND PART OF THE TASK-------//
+//1.-------EVEN OR ODD-------//
+// debugger;
+let userNumber = +prompt("Please, enter the Number");
+userNumberTypeof = typeof userNumber;
+console.log(
+  "Inf:",
+  "Number Is:",
+  userNumber,
+  "type of userNumber:",
+  typeof userNumber,
+  "userNumberTypeof:",
+  typeof userNumberTypeof
+);
+
+// switch (isNaN(userNumber)) {
+//   case true:
+//     alert("NaN");
+//   case false:
+//     switch (userNumberTypeof) {
+//       case "string":
+//       case "object":
+//       case "0":
+//         alert("This is not a number");
+//         break;
+//       default:
+//         alert("default");
+//     }
+// }
+
+// switch (userNumberTypeof) {
+//   // case 0:
+//   //   userNumber = String(userNumber); //If userNumber is 0 -> convert it to String
+//   //
+//   //   break;
+//   case "string":
+//   case "object":
+//     console.log("if 0 conv to Str:", userNumberTypeof, typeof userNumberTypeof);
+//     alert("This is not a number");
+//     break;
+//   default:
+//     alert("default");
+//     console.log("if 0 conv to Str:", userNumberTypeof, typeof userNumberTypeof);
+// }
+
+console.log("The end:", userNumber, typeof userNumber, typeof userNumberTypeof);
