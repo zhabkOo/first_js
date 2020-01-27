@@ -25,38 +25,18 @@ console.log(circleArea); //output result to console
 //1.-------EVEN OR ODD-------//
 // debugger;
 let userNumber = prompt("Please, enter the Number");
-console.log(userNumber);
 
-// if (userNumber === null && "") {
-//   switch (userNumber) {
-//     case null:
-//       alert("You refused to play a game with me");
-//       break;
-//     case "":
-//       alert("Give me more data");
-//       break;
-//   }
-// } else {
-//   alert("nothing");
-// }
 if (userNumber === null) {
   alert("You refused to play a game with me"); //check pressing cancel button
 } else if (userNumber === "") {
   alert("Give me more data"); //check pressing OK button with empty input
 } else if (isNaN(userNumber)) {
   alert("I understand only numbers"); //check not a number input
-  // switch (isNaN(userNumber)) {
-  //   case true:
-  //     alert("I understand only numbers");
-  //     break;
-  //   default:
-  //     "";
-  // }
 } else if (userNumber === "0") {
   alert("This is 0, and it is already string"); //no need to convert 0 to string because it is already a string
 } else if (userNumber) {
   userNumber = +userNumber; //just in case, translate string to a number
-  alert(userNumber % 2 === 0 ? "Even" : "odd");
+  alert(userNumber % 2 === 0 ? "Even" : "Odd");
   switch (userNumber < 0) {
     case true:
       userNumber % 3 === 0
@@ -70,7 +50,24 @@ if (userNumber === null) {
           );
       break;
     case false:
-      alert(`Square root of ${userNumber} is ${Math.sqrt(userNumber)}`);
+      let squaredRoot = Math.sqrt(userNumber);
+      alert(`Square root of ${userNumber} is ${squaredRoot}`);
+      let roundedUpSquaredRoot = Math.ceil(squaredRoot);
+      console.log(`RoundedUpSquare: ${roundedUpSquaredRoot}`);
+      switch (roundedUpSquaredRoot > 1) {
+        case true:
+          alert(
+            `Rounded up squared root > 1, multipled by itself = ${roundedUpSquaredRoot *
+              roundedUpSquaredRoot}`
+          );
+          break;
+        case false:
+          alert(
+            `Rounded up squared root < 1, subtract 0.5 from the Rounded up squared root = ${roundedUpSquaredRoot -
+              0.5}`
+          );
+          break;
+      }
     default:
       "";
   }
